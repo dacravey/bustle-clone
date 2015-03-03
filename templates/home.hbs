@@ -1,81 +1,125 @@
 <div class="container">
 
   <div class="col-md-12 well">
-    <h4>Here is a carousel</h4>
+    <!-- <div class="bs-example"> -->
+      <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
 
-    {{#if isPictureShowing}}
-      <p><img src="css/img/kitten.jpg" /></p>
-    {{else}}
-      <button class="btn btn-info" {{action 'showPicture'}}>Next</button>
-    {{/if}}
+
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="css/img/kitten.jpg" alt="First slide">
+          </div>
+          <div class="item">
+            <img src="css/img/banana.jpeg" alt="Second slide">
+          </div>
+          <div class="item">
+            <img src="css/img/lebron.jpg" alt="Third slide">
+          </div>
+          <div class="item">
+            <img src="css/img/gaga.jpeg" alt="Fourth slide">
+          </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel"
+        data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel"
+        data-slide="next">&rsaquo;</a>
+      </div>
+    <!-- </div> -->
   </div>
-
-    <ul id="home">
-      <div class="row">
-        <div class="col-md-4">
-          {{#link-to 'banana'}}
-          <img src="css/img/banana.jpeg" />
-          <li href="#">Wearable Banana</li>
-          {{/link-to}}
-          <hr>
-          Lauren Berbato           41 minutes ago
-        </div>
-        <div class="col-md-4">
-          {{#link-to 'lebron'}}
-          <img src="css/img/lebron.jpg" />
-          <li href="#">James Harden kicks Lebron in the groin.</li>
-          {{/link-to}}
-          <hr>
-          Lucia Peters              an hour ago
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          {{#link-to 'kitten'}}
-          <img src="css/img/kitten.jpg" />
-          <li href="#">Kitten Is Utterly Confused By The Discovery Of Her Tail</li>
-          {{/link-to}}
-          <hr>
-          Jamie Kenney              an hour ago
-        </div>
-        <div class="col-md-4">
-          {{#link-to 'gaga'}}
-          <img src="css/img/gaga.jpeg" />
-          <li href="#">Why did Lady Gaga and Vince Vaughn jump in a freezing lake?</li>
-          {{/link-to}}
-          <hr>
-          Amy Sciarreto             2 hours ago
-        </div>
-      </div>
-    </ul>
-      <div class="col-md-4">
-        <img src="css/img/adbar.png" />
-      </div>
 </div>
 
 
 
+        <!-- Carousel items -->
+        <!-- <div class="carousel-inner">
+          <div class="active item">
+            <h2>Slide 1</h2>
+            <div class="carousel-caption">
+              <h3>Kitten Is Utterly Confused By The Discovery Of Her Tail</h3>
+              <img src="css/img/kitten.jpg" />
+            </div>
+          </div>
+          <div class="item">
+            <h2>Slide 2</h2>
+            <div class="carousel-caption">
+              <h3>Wearable Bananas?</h3>
+              <img src="css/img/banana.jpeg" />
+            </div>
+          </div>
+          <div class="item">
+            <h2>Slide 3</h2>
+            <div class="carousel-caption">
+              <h3>James Harden kicks Lebron in the groin</h3>
+              <img src="css/img/lebron.jpg" />
+            </div>
+          </div>
+          <div class="item">
+            <h2>Slide 4</h2>
+            <div class="carousel-caption">
+              <h3>Lady Gaga and Vince Vaughn jump in a freezing lake</h3>
+              <img src="css/img/gaga.jpeg" />
+            </div>
+          </div>
+        </div>
+        <!-- Carousel nav -->
+        <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon css/fonts/glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon css/fonts/glyphicon-chevron-right"></span>
+        </a>
+      </div> -->
+    <!-- </div>
+  </div>
 
-<!-- //Ember version (not yet functioning) -->
-<!-- /*<script type="text/x-handlebars" data-template-name="main">
-Carousel
-{{view Ember.ContainerView currentViewBinding="selectedView"}}
-{{#view Ember.Button action="previous" targetBinding="controller"}}Previous{{/view}}
-{{#view Ember.Button action="next" targetBinding="controller"}}Next{{/view}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="aTemplate">
-The A View
-<img src="css/img/banana.jpeg" />
-</script>
-
-<script type="text/x-handlebars" data-template-name="bTemplate">
-The B View
-<img src="css/img/gaga.jpeg" />
-
-</script>
-<script type="text/x-handlebars" data-template-name="cTemplate">
-The C View
-<img src="css/img/kitten.jpg" />
-
-</script>*/ -->
+  <ul id="home">
+    <div class="row">
+      <div class="col-md-4">
+        {{#link-to 'banana'}}
+        <img src="css/img/banana.jpeg" />
+        <li href="#">Wearable Banana</li>
+        {{/link-to}}
+        <hr>
+        Lauren Berbato           41 minutes ago
+      </div>
+      <div class="col-md-4">
+        {{#link-to 'lebron'}}
+        <img src="css/img/lebron.jpg" />
+        <li href="#">James Harden kicks Lebron in the groin.</li>
+        {{/link-to}}
+        <hr>
+        Lucia Peters              an hour ago
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        {{#link-to 'kitten'}}
+        <img src="css/img/kitten.jpg" />
+        <li href="#">Kitten Is Utterly Confused By The Discovery Of Her Tail</li>
+        {{/link-to}}
+        <hr>
+        Jamie Kenney              an hour ago
+      </div>
+      <div class="col-md-4">
+        {{#link-to 'gaga'}}
+        <img src="css/img/gaga.jpeg" />
+        <li href="#">Why did Lady Gaga and Vince Vaughn jump in a freezing lake?</li>
+        {{/link-to}}
+        <hr>
+        Amy Sciarreto             2 hours ago
+      </div>
+    </div>
+  </ul>
+  <div class="col-md-4">
+    <img src="css/img/adbar.png" />
+  </div> -->
+<!-- </div> -->
