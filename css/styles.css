@@ -19,6 +19,16 @@ img {
     margin-left: -100px;
 }
 
+.carousel{
+    margin-top: 20px;
+}
+    
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
 h2{
     margin: 0;
     color: #666;
@@ -31,9 +41,7 @@ h2{
     text-align: center;
     height: 300px !important;
 }
-.carousel{
-    margin-top: 20px;
-}
+
 .bs-example{
 	margin: 20px;
 }
